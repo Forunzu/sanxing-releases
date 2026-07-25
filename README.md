@@ -2,7 +2,7 @@
 
 > 这里提供三省桌面端的公开下载、自动更新元数据和 Release Notes。完整源码与开发说明位于 [`Forunzu/sanxing`](https://github.com/Forunzu/sanxing)。
 
-![Version](https://img.shields.io/badge/version-5.0.0-596d5c?style=flat-square)
+![Version](https://img.shields.io/badge/version-5.0.1-596d5c?style=flat-square)
 ![Platform](https://img.shields.io/badge/Windows-x64-3f4641?style=flat-square)
 ![Storage](https://img.shields.io/badge/storage-Markdown%20Vault-87968a?style=flat-square)
 
@@ -25,17 +25,27 @@
 
 前往 [Latest Release](https://github.com/Forunzu/sanxing-releases/releases/latest)：
 
+> 从 4.4.1 等旧安装版升级时，请使用 5.0.1 Setup；它会先校验、备份并迁移旧安装目录数据，再执行升级。
+
 | 文件 | 用途 |
 |---|---|
-| `Sanxing-Desktop-5.0.0-setup.exe` | **推荐**，Windows 一键安装版，支持软件内自动更新 |
-| `Sanxing-Desktop-5.0.0-win-x64.zip` | 解压即用的完整绿色版 |
-| `Sanxing-Desktop-5.0.0-portable.exe` | 单文件备用版，适合临时或隔离使用 |
+| `Sanxing-Desktop-5.0.1-setup.exe` | **推荐**，Windows 一键安装版，支持软件内自动更新 |
+| `Sanxing-Desktop-5.0.1-win-x64.zip` | 解压即用的完整绿色版 |
+| `Sanxing-Desktop-5.0.1-portable.exe` | 单文件备用版，适合临时或隔离使用 |
 | `latest.yml` / `*.blockmap` | 自动更新元数据，请勿单独安装 |
 | `SHA256SUMS.txt` | 安装包完整性校验 |
 
 > Windows 安装包当前未进行商业代码签名，SmartScreen 可能在首次下载或启动时提示。请只从 `Forunzu/sanxing` 或本仓库下载，并核验 SHA256。
 
 ---
+
+## 5.0.1 安装迁移热修
+
+- 修复旧安装版升级时反复提示“三省无法关闭”的问题；
+- 在旧卸载器运行前迁移并备份安装目录内的历史数据；
+- 兼容以英文句点或空格结尾的旧路径；
+- 稳定数据已存在时只备份、不覆盖，迁移失败则停止安装；
+- 29/29 自动化与真实升级夹具通过。
 
 ## 5.0「脉络」
 
